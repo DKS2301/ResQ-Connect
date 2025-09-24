@@ -1,0 +1,110 @@
+# Default values for graph-service
+replicaCount: 2
+
+image:
+  repository: 739275464689.dkr.ecr.us-west-2.amazonaws.com/resqconnect-graph-service
+  pullPolicy: Always
+  tag: "latest"
+
+imagePullSecrets:
+  - name: regcred
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  fsGroup: 1000
+
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+    add:
+      - NET_BIND_SERVICE
+  readOnlyRootFilesystem: false
+  runAsNonRoot: true
+  runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8087
+
+resources:
+  limits:
+    memory: 1Gi
+    cpu: 500m
+  requests:
+    cpu: 200m
+    memory: 512Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 6
+  targetCPUUtilizationPercentage: 70
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+# Environment variables
+env:
+  - name: NEO4J_URI
+    value: "bolt://neo4j-service:7687"
+  - name: NEO4J_USERNAME
+    value: "neo4j"
+  - name: NEO4J_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: neo4j-secret
+        key: password
+  - name: SECURITY_USER
+    value: "admin"
+  - name: SECURITY_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: graph-service-secret
+        key: password
+
+# Health checks
+livenessProbe:
+  httpGet:
+    path: /actuator/health
+    port: 8087
+  initialDelaySeconds: 60
+  periodSeconds: 30
+
+readinessProbe:
+  httpGet:
+    path: /actuator/health
+    port: 8087
+  initialDelaySeconds: 30
+  periodSeconds: 10
+
+# Metrics
+metrics:
+  enabled: true
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8087"
+    prometheus.io/path: "/actuator/prometheus"
+
+# Neo4j dependency (for development)
+neo4j:
+  enabled: true
+  image:
+    repository: neo4j
+    tag: "5.15.0"
+  service:
+    name: neo4j-service
+    port: 7687
+  auth:
+    password: "resqconnect123"
