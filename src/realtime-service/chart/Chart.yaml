@@ -1,5 +1,5 @@
 apiVersion: v2
-name: realtime-service
+name: resqconnect-realtime-service-chart
 description: ResQConnect Realtime Service - WebSocket real-time updates
 type: application
 version: 0.1.0

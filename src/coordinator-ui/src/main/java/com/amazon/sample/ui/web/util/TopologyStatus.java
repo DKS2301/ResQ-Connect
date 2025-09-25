@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.web.util;
+package com.resqconnect.ui.web.util;
 
 public enum TopologyStatus {
   HEALTHY,

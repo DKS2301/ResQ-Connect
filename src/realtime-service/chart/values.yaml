@@ -88,3 +88,23 @@ metrics:
     prometheus.io/scrape: "true"
     prometheus.io/port: "8088"
     prometheus.io/path: "/metrics"
+
+# ResQConnect additions (non-invasive defaults)
+eventBus:
+  provider: kafka
+  brokers: []
+  topics:
+    matchProposed: "match.proposed"
+    volunteerStatusChanged: "volunteer.status_changed"
+
+otel:
+  exporterOtlpEndpoint: ""
+  resourceAttributes:
+    serviceName: "realtime-service"
+
+security:
+  jwt:
+    issuer: ""
+    audience: ""
+  mtls:
+    enabled: false

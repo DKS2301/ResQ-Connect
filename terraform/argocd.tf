@@ -6,7 +6,7 @@
 resource "time_sleep" "wait_for_cluster" {
   create_duration = "30s"
   depends_on = [
-    module.retail_app_eks,
+    module.resqconnect_eks,
     module.eks_addons
   ]
 }

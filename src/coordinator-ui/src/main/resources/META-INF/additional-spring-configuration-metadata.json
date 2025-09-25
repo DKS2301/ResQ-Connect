@@ -16,14 +16,14 @@
       "description": "Overrides the location where the sample product images are sourced from to use the specified file path"
     },
     {
-      "name": "retail.ui.endpoints.catalog",
+      "name": "retail.ui.endpoints.request",
       "type": "java.lang.String",
-      "description": "HTTP endpoint for the catalog service"
+      "description": "HTTP endpoint for the request service"
     },
     {
-      "name": "retail.ui.endpoints.carts",
+      "name": "retail.ui.endpoints.volunteers",
       "type": "java.lang.String",
-      "description": "HTTP endpoint for the carts service"
+      "description": "HTTP endpoint for the volunteers service"
     },
     {
       "name": "retail.ui.endpoints.checkout",
@@ -31,9 +31,9 @@
       "description": "HTTP endpoint for the checkout service"
     },
     {
-      "name": "retail.ui.endpoints.orders",
+      "name": "retail.ui.endpoints.matching",
       "type": "java.lang.String",
-      "description": "HTTP endpoint for the orders service"
+      "description": "HTTP endpoint for the matching service"
     },
     {
       "name": "retail.ui.chat.enabled",

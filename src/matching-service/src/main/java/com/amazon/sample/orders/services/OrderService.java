@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.services;
+package com.resqconnect.matching.services;
 
-import com.amazon.sample.orders.entities.OrderEntity;
-import com.amazon.sample.orders.messaging.OrdersEventHandler;
-import com.amazon.sample.orders.repositories.OrderRepository;
+import com.resqconnect.matching.entities.OrderEntity;
+import com.resqconnect.matching.messaging.OrdersEventHandler;
+import com.resqconnect.matching.repositories.OrderRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;

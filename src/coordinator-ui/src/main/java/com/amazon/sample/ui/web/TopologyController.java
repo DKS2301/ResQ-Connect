@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web;
+package com.resqconnect.ui.web;
 
-import com.amazon.sample.ui.config.EndpointProperties;
-import com.amazon.sample.ui.web.util.TopologyInformation;
-import com.amazon.sample.ui.web.util.TopologyStatus;
+import com.resqconnect.ui.config.EndpointProperties;
+import com.resqconnect.ui.web.util.TopologyInformation;
+import com.resqconnect.ui.web.util.TopologyStatus;
 import io.netty.channel.ChannelOption;
 import java.time.Duration;
 import java.util.Map;

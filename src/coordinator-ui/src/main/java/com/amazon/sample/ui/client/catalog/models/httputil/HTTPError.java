@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.client.catalog.models.httputil;
+package com.resqconnect.ui.client.catalog.models.httputil;
 
 import com.microsoft.kiota.ApiException;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;

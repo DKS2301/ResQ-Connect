@@ -17,7 +17,7 @@
  * test comment
  */
 
-package com.amazon.sample.carts;
+package com.resqconnect.volunteer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

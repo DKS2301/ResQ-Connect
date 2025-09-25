@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 /*test Comment*/
-package com.amazon.sample.carts.web;
+package com.resqconnect.volunteer.web;
 
-import com.amazon.sample.carts.services.CartService;
-import com.amazon.sample.carts.web.api.Cart;
-import com.amazon.sample.carts.web.api.Item;
+import com.resqconnect.volunteer.services.CartService;
+import com.resqconnect.volunteer.web.api.Cart;
+import com.resqconnect.volunteer.web.api.Item;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
@@ -41,8 +41,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Tag(name = "carts")
-@RequestMapping(path = "/carts")
+@Tag(name = "volunteers")
+@RequestMapping(path = "/volunteers")
 @Slf4j
 public class CartsController {
 
@@ -76,7 +76,7 @@ public class CartsController {
     value = "/{customerId}/merge",
     produces = MediaType.APPLICATION_JSON_VALUE
   )
-  @Operation(summary = "Merge two carts contents", operationId = "mergeCarts")
+  @Operation(summary = "Merge two volunteers contents", operationId = "mergeCarts")
   public void mergeCarts(
     @PathVariable String customerId,
     @RequestParam(value = "sessionId") String sessionId

@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.config.chat;
+package com.resqconnect.ui.config.chat;
 
-import com.amazon.sample.ui.chat.MockChatModel;
+import com.resqconnect.ui.chat.MockChatModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

@@ -1,6 +1,6 @@
-package com.amazon.sample.ui.client.cart.carts.item.items.item;
+package com.resqconnect.ui.client.cart.carts.item.items.item;
 
-import com.amazon.sample.ui.client.cart.models.Item;
+import com.resqconnect.ui.client.cart.models.Item;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;

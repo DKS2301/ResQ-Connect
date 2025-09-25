@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web;
+package com.resqconnect.ui.web;
 
-import com.amazon.sample.ui.services.metadata.MetadataService;
+import com.resqconnect.ui.services.metadata.MetadataService;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;

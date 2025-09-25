@@ -16,12 +16,12 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.services;
+package com.resqconnect.volunteer.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.amazon.sample.carts.repositories.CartEntity;
-import com.amazon.sample.carts.repositories.ItemEntity;
+import com.resqconnect.volunteer.repositories.CartEntity;
+import com.resqconnect.volunteer.repositories.ItemEntity;
 import org.junit.jupiter.api.Test;
 
 public abstract class AbstractServiceTests {

@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.config.messaging;
+package com.resqconnect.matching.config.messaging;
 
-import com.amazon.sample.orders.messaging.sqs.SqsMessagingProvider;
+import com.resqconnect.matching.messaging.sqs.SqsMessagingProvider;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.awspring.cloud.autoconfigure.sqs.SqsAutoConfiguration;
 import io.awspring.cloud.autoconfigure.sqs.SqsProperties;
@@ -43,7 +43,7 @@ public class SqsMessagingConfig extends SqsAutoConfiguration {
     super(sqsProperties);
   }
 
-  @Value("${retail.orders.messaging.sqs.topic}")
+  @Value("${retail.matching.messaging.sqs.topic}")
   private String messageQueueTopic;
 
   @Bean

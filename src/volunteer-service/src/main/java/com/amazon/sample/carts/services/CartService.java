@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.services;
+package com.resqconnect.volunteer.services;
 
-import com.amazon.sample.carts.repositories.CartEntity;
-import com.amazon.sample.carts.repositories.ItemEntity;
+import com.resqconnect.volunteer.repositories.CartEntity;
+import com.resqconnect.volunteer.repositories.ItemEntity;
 import java.util.List;
 import java.util.Optional;
 

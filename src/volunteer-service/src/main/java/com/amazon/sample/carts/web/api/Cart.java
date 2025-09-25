@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.web.api;
+package com.resqconnect.volunteer.web.api;
 
-import com.amazon.sample.carts.repositories.CartEntity;
+import com.resqconnect.volunteer.repositories.CartEntity;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

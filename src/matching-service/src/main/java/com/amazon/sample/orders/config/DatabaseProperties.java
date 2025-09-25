@@ -1,4 +1,4 @@
-package com.amazon.sample.orders.config;
+package com.resqconnect.matching.config;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
@@ -12,7 +12,7 @@ import org.springframework.validation.annotation.Validated;
 @Setter
 public class DatabaseProperties {
 
-  public static final String PREFIX = "retail.orders.persistence";
+  public static final String PREFIX = "retail.matching.persistence";
 
   @NotEmpty
   private String endpoint;

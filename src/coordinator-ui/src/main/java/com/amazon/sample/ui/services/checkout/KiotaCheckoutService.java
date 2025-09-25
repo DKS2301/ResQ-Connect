@@ -16,17 +16,17 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.checkout;
+package com.resqconnect.ui.services.checkout;
 
-import com.amazon.sample.ui.client.checkout.CheckoutClient;
-import com.amazon.sample.ui.client.checkout.models.CheckoutRequest;
-import com.amazon.sample.ui.services.carts.CartsService;
-import com.amazon.sample.ui.services.carts.model.Cart;
-import com.amazon.sample.ui.services.checkout.model.Checkout;
-import com.amazon.sample.ui.services.checkout.model.CheckoutMapper;
-import com.amazon.sample.ui.services.checkout.model.CheckoutSubmitted;
-import com.amazon.sample.ui.services.checkout.model.ShippingAddress;
-import com.amazon.sample.ui.util.RetryUtils;
+import com.resqconnect.ui.client.checkout.CheckoutClient;
+import com.resqconnect.ui.client.checkout.models.CheckoutRequest;
+import com.resqconnect.ui.services.carts.CartsService;
+import com.resqconnect.ui.services.carts.model.Cart;
+import com.resqconnect.ui.services.checkout.model.Checkout;
+import com.resqconnect.ui.services.checkout.model.CheckoutMapper;
+import com.resqconnect.ui.services.checkout.model.CheckoutSubmitted;
+import com.resqconnect.ui.services.checkout.model.ShippingAddress;
+import com.resqconnect.ui.util.RetryUtils;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;

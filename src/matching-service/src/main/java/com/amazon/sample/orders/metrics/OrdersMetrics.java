@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.metrics;
+package com.resqconnect.matching.metrics;
 
-import com.amazon.sample.events.orders.OrderCreatedEvent;
-import com.amazon.sample.orders.entities.OrderItemEntity;
+import com.amazon.sample.events.matching.OrderCreatedEvent;
+import com.resqconnect.matching.entities.OrderItemEntity;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import java.util.HashMap;
@@ -38,9 +38,9 @@ public class OrdersMetrics {
 
   public OrdersMetrics(MeterRegistry meterRegistry) {
     this.meterRegistry = meterRegistry;
-    this.orderCreatedCounter = Counter.builder("watch.orders")
+    this.orderCreatedCounter = Counter.builder("watch.matching")
       .tag("productId", "*")
-      .description("The number of orders placed")
+      .description("The number of matching placed")
       .register(meterRegistry);
     this.orderTotal = new AtomicInteger(0);
     meterRegistry.gauge("watch.orderTotal", orderTotal);
@@ -63,7 +63,7 @@ public class OrdersMetrics {
 
   private Counter getCounter(OrderItemEntity orderentity) {
     if (null == watchCounters.get(orderentity.getProductId())) {
-      Counter counter = Counter.builder("watch.orders")
+      Counter counter = Counter.builder("watch.matching")
         .tag("productId", orderentity.getProductId())
         .register(meterRegistry);
       watchCounters.put(orderentity.getProductId(), counter);

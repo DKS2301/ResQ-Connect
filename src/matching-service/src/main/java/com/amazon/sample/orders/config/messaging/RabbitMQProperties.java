@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.config.messaging;
+package com.resqconnect.matching.config.messaging;
 
 import java.util.List;
 import lombok.Getter;
@@ -30,7 +30,7 @@ import org.springframework.validation.annotation.Validated;
 @Setter
 public class RabbitMQProperties {
 
-  public static final String PREFIX = "retail.orders.messaging.rabbitmq";
+  public static final String PREFIX = "retail.matching.messaging.rabbitmq";
 
   private List<String> addresses;
 

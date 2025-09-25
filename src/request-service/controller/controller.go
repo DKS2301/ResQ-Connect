@@ -21,9 +21,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/aws-containers/retail-store-sample-app/catalog/api"
-	"github.com/aws-containers/retail-store-sample-app/catalog/httputil"
-	"github.com/aws-containers/retail-store-sample-app/catalog/model"
+	"github.com/aws-containers/retail-store-sample-app/request/api"
+	"github.com/aws-containers/retail-store-sample-app/request/httputil"
+	"github.com/aws-containers/retail-store-sample-app/request/model"
 	"github.com/gin-gonic/gin"
 )
 
@@ -40,9 +40,9 @@ func NewController(api *api.CatalogAPI) (*Controller, error) {
 }
 
 // GetProducts godoc
-// @Summary Get catalog
-// @Description Get catalog
-// @Tags catalog
+// @Summary Get request
+// @Description Get request
+// @Tags request
 // @Accept  json
 // @Produce  json
 // @Param tags query string false "Tagged products to include"
@@ -53,7 +53,7 @@ func NewController(api *api.CatalogAPI) (*Controller, error) {
 // @Failure 400 {object} httputil.HTTPError
 // @Failure 404 {object} httputil.HTTPError
 // @Failure 500 {object} httputil.HTTPError
-// @Router /catalog/products [get]
+// @Router /request/products [get]
 func (c *Controller) GetProducts(ctx *gin.Context) {
 	var tags []string
 
@@ -87,9 +87,9 @@ func (c *Controller) GetProducts(ctx *gin.Context) {
 }
 
 // GetProducts godoc
-// @Summary Get catalog
-// @Description Get catalog
-// @Tags catalog
+// @Summary Get request
+// @Description Get request
+// @Tags request
 // @Accept  json
 // @Produce  json
 // @Param id path string true "product ID"
@@ -97,7 +97,7 @@ func (c *Controller) GetProducts(ctx *gin.Context) {
 // @Failure 400 {object} httputil.HTTPError
 // @Failure 404 {object} httputil.HTTPError
 // @Failure 500 {object} httputil.HTTPError
-// @Router /catalog/products/{id} [get]
+// @Router /request/products/{id} [get]
 func (c *Controller) GetProduct(ctx *gin.Context) {
 	id := ctx.Param("id")
 
@@ -110,9 +110,9 @@ func (c *Controller) GetProduct(ctx *gin.Context) {
 }
 
 // CatalogSize godoc
-// @Summary Get catalog size
-// @Description Get catalog size
-// @Tags catalog
+// @Summary Get request size
+// @Description Get request size
+// @Tags request
 // @Accept  json
 // @Produce  json
 // @Param tags query string false "Tagged products to include"
@@ -120,7 +120,7 @@ func (c *Controller) GetProduct(ctx *gin.Context) {
 // @Failure 400 {object} httputil.HTTPError
 // @Failure 404 {object} httputil.HTTPError
 // @Failure 500 {object} httputil.HTTPError
-// @Router /catalog/size [get]
+// @Router /request/size [get]
 func (c *Controller) CatalogSize(ctx *gin.Context) {
 	var tags []string
 
@@ -144,14 +144,14 @@ func (c *Controller) CatalogSize(ctx *gin.Context) {
 // ListTags godoc
 // @Summary List tags
 // @Description get tags
-// @Tags catalog
+// @Tags request
 // @Accept  json
 // @Produce  json
 // @Success 200 {array} model.Tag
 // @Failure 400 {object} httputil.HTTPError
 // @Failure 404 {object} httputil.HTTPError
 // @Failure 500 {object} httputil.HTTPError
-// @Router /catalog/tags [get]
+// @Router /request/tags [get]
 func (c *Controller) ListTags(ctx *gin.Context) {
 	accounts, err := c.api.GetTags(ctx.Request.Context())
 	if err != nil {

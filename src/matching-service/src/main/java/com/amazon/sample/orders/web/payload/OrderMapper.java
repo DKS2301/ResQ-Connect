@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.web.payload;
+package com.resqconnect.matching.web.payload;
 
-import com.amazon.sample.orders.entities.OrderEntity;
+import com.resqconnect.matching.entities.OrderEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

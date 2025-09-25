@@ -2,19 +2,19 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: ui
+  name: coordinator-ui
 spec:
   hosts:
   - "*"
   gateways:
-  - retail-store-sample
+  - resqconnect-gateway
   http:
   - match:
     - uri:
         prefix: /
     route:
     - destination:
-        host: ui
+        host: coordinator-ui
         port:
           number: 80
 {{- end }}

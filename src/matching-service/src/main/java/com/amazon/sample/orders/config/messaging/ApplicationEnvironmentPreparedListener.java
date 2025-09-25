@@ -1,4 +1,4 @@
-package com.amazon.sample.orders.config.messaging;
+package com.resqconnect.matching.config.messaging;
 
 import java.util.Properties;
 import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
@@ -13,22 +13,22 @@ public class ApplicationEnvironmentPreparedListener
     var environment = event.getEnvironment();
 
     var messagingProvider = environment.getProperty(
-      "retail.orders.messaging.provider"
+      "retail.matching.messaging.provider"
     );
 
     if (messagingProvider.equals("rabbitmq")) {
       Properties props = new Properties();
       props.put(
         "spring.rabbitmq.addresses",
-        environment.getProperty("retail.orders.messaging.rabbitmq.addresses")
+        environment.getProperty("retail.matching.messaging.rabbitmq.addresses")
       );
       props.put(
         "spring.rabbitmq.username",
-        environment.getProperty("retail.orders.messaging.rabbitmq.username")
+        environment.getProperty("retail.matching.messaging.rabbitmq.username")
       );
       props.put(
         "spring.rabbitmq.password",
-        environment.getProperty("retail.orders.messaging.rabbitmq.password")
+        environment.getProperty("retail.matching.messaging.rabbitmq.password")
       );
       environment
         .getPropertySources()

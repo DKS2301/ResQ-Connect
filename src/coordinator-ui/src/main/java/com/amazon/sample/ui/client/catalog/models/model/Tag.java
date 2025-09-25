@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.client.catalog.models.model;
+package com.resqconnect.ui.client.catalog.models.model;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

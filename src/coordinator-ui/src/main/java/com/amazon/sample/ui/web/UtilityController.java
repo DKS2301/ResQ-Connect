@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web;
+package com.resqconnect.ui.web;
 
-import com.amazon.sample.ui.util.ToggleHealthIndicator;
+import com.resqconnect.ui.util.ToggleHealthIndicator;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;

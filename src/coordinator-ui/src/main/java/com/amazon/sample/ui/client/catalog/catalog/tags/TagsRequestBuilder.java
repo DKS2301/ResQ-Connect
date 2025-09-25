@@ -1,7 +1,7 @@
-package com.amazon.sample.ui.client.catalog.catalog.tags;
+package com.resqconnect.ui.client.catalog.catalog.tags;
 
-import com.amazon.sample.ui.client.catalog.models.httputil.HTTPError;
-import com.amazon.sample.ui.client.catalog.models.model.Tag;
+import com.resqconnect.ui.client.catalog.models.httputil.HTTPError;
+import com.resqconnect.ui.client.catalog.models.model.Tag;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;

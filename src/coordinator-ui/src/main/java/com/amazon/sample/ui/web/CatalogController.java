@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web;
+package com.resqconnect.ui.web;
 
-import com.amazon.sample.ui.services.catalog.CatalogService;
-import com.amazon.sample.ui.web.util.RequiresCommonAttributes;
+import com.resqconnect.ui.services.catalog.CatalogService;
+import com.resqconnect.ui.web.util.RequiresCommonAttributes;
 import java.util.Collections;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

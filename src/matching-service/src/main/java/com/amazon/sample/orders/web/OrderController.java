@@ -17,12 +17,12 @@
  */
 
 /*Test comment*/
-package com.amazon.sample.orders.web;
+package com.resqconnect.matching.web;
 
-import com.amazon.sample.orders.services.OrderService;
-import com.amazon.sample.orders.web.payload.ExistingOrder;
-import com.amazon.sample.orders.web.payload.Order;
-import com.amazon.sample.orders.web.payload.OrderMapper;
+import com.resqconnect.matching.services.OrderService;
+import com.resqconnect.matching.web.payload.ExistingOrder;
+import com.resqconnect.matching.web.payload.Order;
+import com.resqconnect.matching.web.payload.OrderMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
@@ -36,8 +36,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/orders")
-@Tag(name = "orders")
+@RequestMapping("/matching")
+@Tag(name = "matching")
 @Slf4j
 public class OrderController {
 
@@ -58,7 +58,7 @@ public class OrderController {
   }
 
   @GetMapping(produces = { "application/json" })
-  @Operation(summary = "List orders", operationId = "listOrders")
+  @Operation(summary = "List matching", operationId = "listOrders")
   public List<ExistingOrder> order() {
     return this.service.list()
       .stream()

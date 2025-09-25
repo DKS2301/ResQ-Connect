@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web.util;
+package com.resqconnect.ui.web.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpCookie;

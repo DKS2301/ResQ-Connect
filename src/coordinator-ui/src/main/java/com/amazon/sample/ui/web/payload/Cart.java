@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web.payload;
+package com.resqconnect.ui.web.payload;
 
 import java.util.ArrayList;
 import java.util.List;

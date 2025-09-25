@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.events.orders;
+package com.amazon.sample.events.matching;
 
-import com.amazon.sample.orders.entities.OrderItemEntity;
+import com.resqconnect.matching.entities.OrderItemEntity;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

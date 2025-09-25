@@ -1,11 +1,11 @@
 {
   "descriptionHash": "13E23AD44E2FAD9459E12B4C4169EE9B5CEC0BC83ECFBD69FA4446AD46FCC0445FF1F28108C205432A94D05C18C0DF4480DE968C8AB6A7FDF45AFEE076D9ACB9",
-  "descriptionLocation": "../../../../../../../../../../catalog/openapi.yml",
+  "descriptionLocation": "../../../../../../../../../../request/openapi.yml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.21.0",
   "clientClassName": "CatalogClient",
   "typeAccessModifier": "Public",
-  "clientNamespaceName": "com.amazon.sample.ui.client.catalog",
+  "clientNamespaceName": "com.amazon.sample.ui.client.request",
   "language": "Java",
   "usesBackingStore": false,
   "excludeBackwardCompatible": false,

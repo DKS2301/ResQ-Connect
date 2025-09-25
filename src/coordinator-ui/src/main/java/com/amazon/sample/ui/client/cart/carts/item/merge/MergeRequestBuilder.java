@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.client.cart.carts.item.merge;
+package com.resqconnect.ui.client.cart.carts.item.merge;
 
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;

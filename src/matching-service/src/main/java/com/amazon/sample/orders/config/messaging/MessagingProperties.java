@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.config.messaging;
+package com.resqconnect.matching.config.messaging;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -29,7 +29,7 @@ import org.springframework.validation.annotation.Validated;
 @Setter
 public class MessagingProperties {
 
-  public static final String PREFIX = "retail.orders.messaging";
+  public static final String PREFIX = "retail.matching.messaging";
 
   private String provider;
 }

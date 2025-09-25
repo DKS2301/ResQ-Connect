@@ -8,7 +8,7 @@ metadata:
 spec:
   project: resqconnect
   source:
-    repoURL: https://github.com/DKS2301/retail-store-sample-app
+    repoURL: https://github.com/DKS2301/ResQ-Connect
     targetRevision: gitops
     path: src/ingest-service/chart
     helm:

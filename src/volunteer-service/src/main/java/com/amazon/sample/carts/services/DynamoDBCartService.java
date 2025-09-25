@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.services;
+package com.resqconnect.volunteer.services;
 
-import com.amazon.sample.carts.repositories.CartEntity;
-import com.amazon.sample.carts.repositories.ItemEntity;
-import com.amazon.sample.carts.repositories.dynamo.entities.DynamoItemEntity;
+import com.resqconnect.volunteer.repositories.CartEntity;
+import com.resqconnect.volunteer.repositories.ItemEntity;
+import com.resqconnect.volunteer.repositories.dynamo.entities.DynamoItemEntity;
 import jakarta.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Iterator;

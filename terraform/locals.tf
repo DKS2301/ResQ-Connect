@@ -29,7 +29,7 @@ locals {
   # Common tags applied to all resources
   common_tags = {
     Environment   = var.environment
-    Project       = "retail-store"
+    Project       = "resqconnect"
     ManagedBy     = "terraform"
     CreatedBy     = "DKS2301"
     Owner         = data.aws_caller_identity.current.user_id

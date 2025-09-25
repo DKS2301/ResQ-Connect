@@ -1,5 +1,5 @@
 apiVersion: v2
-name: analytics-service
+name: resqconnect-analytics-service-chart
 description: ResQConnect Analytics Service - Data pipeline and reporting
 type: application
 version: 0.1.0

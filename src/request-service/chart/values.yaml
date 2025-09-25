@@ -1,10 +1,10 @@
-# Default values for catalog.
+# Default values for request-service.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 image:
-  repository: 626072240565.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
+  repository: 626072240565.dkr.ecr.us-west-2.amazonaws.com/resqconnect-request-service
   pullPolicy: Always
   tag: "db791a4"
 imagePullSecrets:
@@ -70,7 +70,7 @@ app:
 mysql:
   create: false
   image:
-    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
+    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/resqconnect-request-service
     pullPolicy: IfNotPresent
     tag: "0fd57ea"
   service:
@@ -98,3 +98,34 @@ podDisruptionBudget:
   enabled: false
   minAvailable: 2
   maxUnavailable: 1
+
+# ResQConnect additions (non-invasive defaults)
+eventBus:
+  provider: kafka
+  brokers: []
+  topics:
+    ingestRaw: "ingest.raw"
+    requestCreated: "request.created"
+    requestEnriched: "request.enriched"
+    matchProposed: "match.proposed"
+    matchAccepted: "match.accepted"
+    assignmentConfirmed: "assignment.confirmed"
+    volunteerStatusChanged: "volunteer.status_changed"
+
+datastores:
+  postgresUrl: ""
+  redisUrl: ""
+  neo4jUri: ""
+  s3Bucket: ""
+
+otel:
+  exporterOtlpEndpoint: ""
+  resourceAttributes:
+    serviceName: "request-service"
+
+security:
+  jwt:
+    issuer: ""
+    audience: ""
+  mtls:
+    enabled: false

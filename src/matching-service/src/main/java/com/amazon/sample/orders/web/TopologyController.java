@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.web;
+package com.resqconnect.matching.web;
 
-import com.amazon.sample.orders.config.DatabaseProperties;
-import com.amazon.sample.orders.config.messaging.RabbitMQProperties;
+import com.resqconnect.matching.config.DatabaseProperties;
+import com.resqconnect.matching.config.messaging.RabbitMQProperties;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
@@ -37,10 +37,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class TopologyController {
 
-  @Value("${retail.orders.persistence.provider}")
+  @Value("${retail.matching.persistence.provider}")
   private String persistenceProvider;
 
-  @Value("${retail.orders.messaging.provider}")
+  @Value("${retail.matching.messaging.provider}")
   private String messagingProvider;
 
   @Autowired(required = false)

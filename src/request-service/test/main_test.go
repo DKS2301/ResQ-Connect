@@ -30,10 +30,10 @@ import (
 	"github.com/testcontainers/testcontainers-go"
 	"github.com/testcontainers/testcontainers-go/wait"
 
-	"github.com/aws-containers/retail-store-sample-app/catalog/api"
-	"github.com/aws-containers/retail-store-sample-app/catalog/config"
-	"github.com/aws-containers/retail-store-sample-app/catalog/controller"
-	"github.com/aws-containers/retail-store-sample-app/catalog/repository"
+	"github.com/aws-containers/retail-store-sample-app/request/api"
+	"github.com/aws-containers/retail-store-sample-app/request/config"
+	"github.com/aws-containers/retail-store-sample-app/request/controller"
+	"github.com/aws-containers/retail-store-sample-app/request/repository"
 
 	"github.com/gin-gonic/gin"
 )
@@ -49,8 +49,8 @@ func TestMain(m *testing.M) {
 	dbConfig = config.DatabaseConfiguration{
 		Type:           "mysql",
 		Endpoint:       endpoint,
-		Name:           "catalogdb",
-		User:           "catalog_user",
+		Name:           "requestdb",
+		User:           "request_user",
 		Password:       "unittest123",
 		ConnectTimeout: 5,
 	}
@@ -80,13 +80,13 @@ func router() *gin.Engine {
 		log.Fatalln("Error creating controller", err)
 	}
 
-	catalog := router.Group("/catalog")
+	request := router.Group("/request")
 
-	catalog.GET("", c.GetProducts)
+	request.GET("", c.GetProducts)
 
-	catalog.GET("/size", c.CatalogSize)
-	catalog.GET("/tags", c.ListTags)
-	catalog.GET("/product/:id", c.GetProduct)
+	request.GET("/size", c.CatalogSize)
+	request.GET("/tags", c.ListTags)
+	request.GET("/product/:id", c.GetProduct)
 
 	return router
 }
@@ -99,8 +99,8 @@ func prepareContainer(ctx context.Context) (testcontainers.Container, string, er
 		Env: map[string]string{
 			"MYSQL_ROOT_PASSWORD":        "unittest123",
 			"MYSQL_ALLOW_EMPTY_PASSWORD": "true",
-			"MYSQL_DATABASE":             "catalogdb",
-			"MYSQL_USER":                 "catalog_user",
+			"MYSQL_DATABASE":             "requestdb",
+			"MYSQL_USER":                 "request_user",
 			"MYSQL_PASSWORD":             "unittest123",
 		},
 	}

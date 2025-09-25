@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.config;
+package com.resqconnect.matching.config;
 
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
@@ -28,8 +28,8 @@ public class OpenAPIConfig {
   @Bean
   public GroupedOpenApi publicApi() {
     return GroupedOpenApi.builder()
-      .group("orders")
-      .pathsToMatch("/orders/**")
+      .group("matching")
+      .pathsToMatch("/matching/**")
       .build();
   }
 }

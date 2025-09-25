@@ -1,8 +1,8 @@
-package com.amazon.sample.ui.client.catalog.catalog;
+package com.resqconnect.ui.client.catalog.catalog;
 
-import com.amazon.sample.ui.client.catalog.catalog.products.ProductsRequestBuilder;
-import com.amazon.sample.ui.client.catalog.catalog.size.SizeRequestBuilder;
-import com.amazon.sample.ui.client.catalog.catalog.tags.TagsRequestBuilder;
+import com.resqconnect.ui.client.catalog.catalog.products.ProductsRequestBuilder;
+import com.resqconnect.ui.client.catalog.catalog.size.SizeRequestBuilder;
+import com.resqconnect.ui.client.catalog.catalog.tags.TagsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;

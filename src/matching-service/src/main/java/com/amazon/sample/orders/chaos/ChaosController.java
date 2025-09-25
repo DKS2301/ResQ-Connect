@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.chaos;
+package com.resqconnect.matching.chaos;
 
 import java.util.Map;
 import org.springframework.http.HttpStatus;

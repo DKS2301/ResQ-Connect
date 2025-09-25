@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.metadata.providers;
+package com.resqconnect.ui.services.metadata.providers;
 
-import com.amazon.sample.ui.services.metadata.MetadataAttribute;
-import com.amazon.sample.ui.services.metadata.MetadataProvider;
-import com.amazon.sample.ui.services.metadata.MetadataSet;
+import com.resqconnect.ui.services.metadata.MetadataAttribute;
+import com.resqconnect.ui.services.metadata.MetadataProvider;
+import com.resqconnect.ui.services.metadata.MetadataSet;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;

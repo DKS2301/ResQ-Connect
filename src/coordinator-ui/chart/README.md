@@ -1,13 +1,13 @@
-# UI Helm Chart
+# Coordinator UI Helm Chart
 
-This Helm chart deploys the UI component of the application.
+This Helm chart deploys the Coordinator UI component of the ResQConnect disaster relief platform.
 
 ## Installation
 
 To install the chart:
 
 ```bash
-helm install ui oci://public.ecr.aws/aws-containers/retail-store-sample-ui-chart:0.8.5
+helm install coordinator-ui oci://public.ecr.aws/aws-containers/resqconnect-coordinator-ui-chart:0.8.5
 ```
 
 To install with custom values:

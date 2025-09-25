@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.util;
+package com.resqconnect.ui.util;
 
 import java.net.ConnectException;
 import java.time.Duration;

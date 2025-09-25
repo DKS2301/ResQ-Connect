@@ -16,13 +16,13 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.catalog;
+package com.resqconnect.ui.services.catalog;
 
-import com.amazon.sample.ui.client.catalog.CatalogClient;
-import com.amazon.sample.ui.services.catalog.model.CatalogMapper;
-import com.amazon.sample.ui.services.catalog.model.Product;
-import com.amazon.sample.ui.services.catalog.model.ProductPage;
-import com.amazon.sample.ui.services.catalog.model.ProductTag;
+import com.resqconnect.ui.client.catalog.CatalogClient;
+import com.resqconnect.ui.services.catalog.model.CatalogMapper;
+import com.resqconnect.ui.services.catalog.model.Product;
+import com.resqconnect.ui.services.catalog.model.ProductPage;
+import com.resqconnect.ui.services.catalog.model.ProductTag;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

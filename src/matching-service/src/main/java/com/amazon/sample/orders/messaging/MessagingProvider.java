@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.messaging;
+package com.resqconnect.matching.messaging;
 
 public interface MessagingProvider {
   void publishEvent(Object event);

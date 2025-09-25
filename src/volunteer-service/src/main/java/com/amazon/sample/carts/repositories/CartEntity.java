@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.repositories;
+package com.resqconnect.volunteer.repositories;
 
 import java.util.List;
 

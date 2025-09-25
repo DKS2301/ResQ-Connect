@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.config;
+package com.resqconnect.volunteer.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

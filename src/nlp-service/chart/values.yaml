@@ -84,3 +84,27 @@ metrics:
     prometheus.io/scrape: "true"
     prometheus.io/port: "8086"
     prometheus.io/path: "/metrics"
+
+# ResQConnect additions (non-invasive defaults)
+eventBus:
+  provider: kafka
+  brokers: []
+  topics:
+    ingestRaw: "ingest.raw"
+    requestEnriched: "request.enriched"
+
+datastores:
+  redisUrl: ""
+  s3Bucket: ""
+
+otel:
+  exporterOtlpEndpoint: ""
+  resourceAttributes:
+    serviceName: "nlp-service"
+
+security:
+  jwt:
+    issuer: ""
+    audience: ""
+  mtls:
+    enabled: false

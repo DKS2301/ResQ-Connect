@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.messaging;
+package com.resqconnect.matching.messaging;
 
-import com.amazon.sample.events.orders.Order;
-import com.amazon.sample.events.orders.OrderCreatedEvent;
-import com.amazon.sample.orders.entities.OrderEntity;
+import com.amazon.sample.events.matching.Order;
+import com.amazon.sample.events.matching.OrderCreatedEvent;
+import com.resqconnect.matching.entities.OrderEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;

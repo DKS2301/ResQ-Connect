@@ -1,7 +1,7 @@
-package com.amazon.sample.ui.client.cart.carts.item.items;
+package com.resqconnect.ui.client.cart.carts.item.items;
 
-import com.amazon.sample.ui.client.cart.carts.item.items.item.WithItemItemRequestBuilder;
-import com.amazon.sample.ui.client.cart.models.Item;
+import com.resqconnect.ui.client.cart.carts.item.items.item.WithItemItemRequestBuilder;
+import com.resqconnect.ui.client.cart.models.Item;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -22,7 +22,7 @@ import java.util.Objects;
 public class ItemsRequestBuilder extends BaseRequestBuilder {
 
   /**
-   * Gets an item from the com.amazon.sample.ui.client.cart.carts.item.items.item collection
+   * Gets an item from the com.resqconnect.ui.client.cart.carts.item.items.item collection
    * @param itemId Unique identifier of the item
    * @return a {@link WithItemItemRequestBuilder}
    */

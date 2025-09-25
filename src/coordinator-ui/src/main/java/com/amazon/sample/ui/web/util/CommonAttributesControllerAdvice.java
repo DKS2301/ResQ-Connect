@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web.util;
+package com.resqconnect.ui.web.util;
 
-import com.amazon.sample.ui.services.carts.CartsService;
+import com.resqconnect.ui.services.carts.CartsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.server.reactive.ServerHttpRequest;

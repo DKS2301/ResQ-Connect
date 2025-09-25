@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.assets;
+package com.resqconnect.ui.services.assets;
 
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;

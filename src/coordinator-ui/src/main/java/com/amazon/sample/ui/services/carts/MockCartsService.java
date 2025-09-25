@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.carts;
+package com.resqconnect.ui.services.carts;
 
-import com.amazon.sample.ui.services.carts.model.Cart;
-import com.amazon.sample.ui.services.carts.model.CartItem;
-import com.amazon.sample.ui.services.catalog.CatalogService;
+import com.resqconnect.ui.services.carts.model.Cart;
+import com.resqconnect.ui.services.carts.model.CartItem;
+import com.resqconnect.ui.services.catalog.CatalogService;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

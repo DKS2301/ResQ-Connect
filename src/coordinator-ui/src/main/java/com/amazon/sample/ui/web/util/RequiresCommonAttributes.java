@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web.util;
+package com.resqconnect.ui.web.util;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

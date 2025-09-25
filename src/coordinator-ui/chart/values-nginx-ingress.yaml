@@ -1,4 +1,4 @@
-# Custom values for UI with NGINX Ingress Controller
+# Custom values for Coordinator UI with NGINX Ingress Controller
 replicaCount: 1
 
 # Service Account Configuration
@@ -7,7 +7,7 @@ serviceAccount:
   create: true
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "retail-store-ui-sa"  # Using a different name to avoid conflicts
+  name: "resqconnect-coordinator-ui-sa"  # Using a different name to avoid conflicts
 
 service:
   type: ClusterIP

@@ -1,26 +1,26 @@
 apiVersion: v2
-name: retail-store-sample-chart
-description: A Helm chart for the AWS retail store containers sample application
+name: resqconnect-app-chart
+description: A Helm chart for the ResQConnect disaster relief platform
 type: application
 version: 1.2.2
 dependencies:
-  - name: retail-store-sample-cart-chart
-    alias: cart
+  - name: resqconnect-volunteer-service-chart
+    alias: volunteer-service
     version: 1.2.2
-    repository: file://../../cart/chart
-  - name: retail-store-sample-catalog-chart
-    alias: catalog
+    repository: file://../../volunteer-service/chart
+  - name: resqconnect-request-service-chart
+    alias: request-service
     version: 1.2.2
-    repository: file://../../catalog/chart
-  - name: retail-store-sample-checkout-chart
-    alias: checkout
+    repository: file://../../request-service/chart
+  - name: resqconnect-notification-service-chart
+    alias: notification-service
     version: 1.2.2
-    repository: file://../../checkout/chart
-  - name: retail-store-sample-orders-chart
-    alias: orders
+    repository: file://../../notification-service/chart
+  - name: resqconnect-matching-service-chart
+    alias: matching-service
     version: 1.2.2
-    repository: file://../../orders/chart
-  - name: retail-store-sample-ui-chart
-    alias: ui
+    repository: file://../../matching-service/chart
+  - name: resqconnect-coordinator-ui-chart
+    alias: coordinator-ui
     version: 1.2.2
-    repository: file://../../ui/chart
+    repository: file://../../coordinator-ui/chart

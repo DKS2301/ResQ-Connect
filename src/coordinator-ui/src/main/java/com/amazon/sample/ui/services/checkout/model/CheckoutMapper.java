@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.checkout.model;
+package com.resqconnect.ui.services.checkout.model;
 
-import com.amazon.sample.ui.services.carts.model.CartItem;
+import com.resqconnect.ui.services.carts.model.CartItem;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -26,32 +26,32 @@ import org.mapstruct.Mapping;
 public interface CheckoutMapper {
   @Mapping(source = "shippingRates.rates", target = "shippingOptions")
   Checkout checkout(
-    com.amazon.sample.ui.client.checkout.models.Checkout checkout
+    com.resqconnect.ui.client.checkout.models.Checkout checkout
   );
 
   CheckoutSubmitted submitted(
-    com.amazon.sample.ui.client.checkout.models.CheckoutSubmitted submitted
+    com.resqconnect.ui.client.checkout.models.CheckoutSubmitted submitted
   );
 
   @Mapping(target = "additionalData", ignore = true)
   @Mapping(target = "fieldDeserializers", ignore = true)
-  com.amazon.sample.ui.client.checkout.models.ShippingAddress clientShippingAddress(
+  com.resqconnect.ui.client.checkout.models.ShippingAddress clientShippingAddress(
     ShippingAddress address
   );
 
   @Mapping(target = "totalCost", ignore = true)
   CheckoutItem item(
-    com.amazon.sample.ui.client.checkout.models.ItemRequest clientItem
+    com.resqconnect.ui.client.checkout.models.ItemRequest clientItem
   );
 
   @Mapping(target = "additionalData", ignore = true)
   @Mapping(target = "fieldDeserializers", ignore = true)
-  com.amazon.sample.ui.client.checkout.models.ItemRequest fromCartItem(
+  com.resqconnect.ui.client.checkout.models.ItemRequest fromCartItem(
     CartItem cartItem
   );
 
-  com.amazon.sample.ui.client.checkout.models.ItemRequest modelitem(
-    com.amazon.sample.ui.client.checkout.models.Item cartItem
+  com.resqconnect.ui.client.checkout.models.ItemRequest modelitem(
+    com.resqconnect.ui.client.checkout.models.Item cartItem
   );
 
   @Mapping(target = "totalCost", ignore = true)
@@ -61,6 +61,6 @@ public interface CheckoutMapper {
   CheckoutItem item(CheckoutItemRequest item);
 
   CheckoutItem fromModelItem(
-    com.amazon.sample.ui.client.checkout.models.Item item
+    com.resqconnect.ui.client.checkout.models.Item item
   );
 }

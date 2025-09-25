@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.web;
+package com.resqconnect.volunteer.web;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.BDDMockito.given;
@@ -24,12 +24,12 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.amazon.sample.carts.chaos.ChaosFilter;
-import com.amazon.sample.carts.repositories.CartEntity;
-import com.amazon.sample.carts.repositories.ItemEntity;
-import com.amazon.sample.carts.services.CartService;
-import com.amazon.sample.carts.util.TestUtil;
-import com.amazon.sample.carts.web.api.Item;
+import com.resqconnect.volunteer.chaos.ChaosFilter;
+import com.resqconnect.volunteer.repositories.CartEntity;
+import com.resqconnect.volunteer.repositories.ItemEntity;
+import com.resqconnect.volunteer.services.CartService;
+import com.resqconnect.volunteer.util.TestUtil;
+import com.resqconnect.volunteer.web.api.Item;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -93,7 +93,7 @@ public class CartsControllerTests {
   void testGetEmptyCart() throws Exception {
     ResultActions actions = mockMvc
       .perform(
-        get("/carts/" + EMPTY_CART_ID)
+        get("/volunteers/" + EMPTY_CART_ID)
           .contentType(MediaType.APPLICATION_JSON_VALUE)
           .accept(MediaType.APPLICATION_JSON)
       )
@@ -109,7 +109,7 @@ public class CartsControllerTests {
   void testGetPopulatedCart() throws Exception {
     ResultActions actions = mockMvc
       .perform(
-        get("/carts/" + POPULATED_CART_ID)
+        get("/volunteers/" + POPULATED_CART_ID)
           .contentType(MediaType.APPLICATION_JSON_VALUE)
           .accept(MediaType.APPLICATION_JSON)
       )
@@ -128,7 +128,7 @@ public class CartsControllerTests {
   void testDeleteCart() throws Exception {
     ResultActions actions = mockMvc
       .perform(
-        delete("/carts/" + EMPTY_CART_ID)
+        delete("/volunteers/" + EMPTY_CART_ID)
           .contentType(MediaType.APPLICATION_JSON_VALUE)
           .accept(MediaType.APPLICATION_JSON)
       )
@@ -141,7 +141,7 @@ public class CartsControllerTests {
   void testAddItem() throws Exception {
     ResultActions actions = mockMvc
       .perform(
-        post("/carts/" + EMPTY_CART_ID + "/items")
+        post("/volunteers/" + EMPTY_CART_ID + "/items")
           .contentType(MediaType.APPLICATION_JSON_VALUE)
           .content(TestUtil.convertObjectToJsonBytes(new Item("1", 1, 150)))
           .accept(MediaType.APPLICATION_JSON)
@@ -159,7 +159,7 @@ public class CartsControllerTests {
   void testDeleteItem() throws Exception {
     mockMvc
       .perform(
-        delete("/carts/" + POPULATED_CART_ID + "/items/1")
+        delete("/volunteers/" + POPULATED_CART_ID + "/items/1")
           .contentType(MediaType.APPLICATION_JSON_VALUE)
           .accept(MediaType.APPLICATION_JSON_VALUE)
       )

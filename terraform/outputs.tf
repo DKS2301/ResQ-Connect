@@ -8,7 +8,7 @@
 
 output "cluster_name" {
   description = "Name of the EKS cluster (with unique suffix)"
-  value       = module.retail_app_eks.cluster_name
+  value       = module.resqconnect_eks.cluster_name
 }
 
 output "cluster_name_base" {
@@ -23,22 +23,22 @@ output "cluster_name_suffix" {
 
 output "cluster_endpoint" {
   description = "Endpoint for EKS control plane"
-  value       = module.retail_app_eks.cluster_endpoint
+  value       = module.resqconnect_eks.cluster_endpoint
 }
 
 output "cluster_version" {
   description = "The Kubernetes version for the EKS cluster"
-  value       = module.retail_app_eks.cluster_version
+  value       = module.resqconnect_eks.cluster_version
 }
 
 output "cluster_security_group_id" {
   description = "Security group ID attached to the EKS cluster"
-  value       = module.retail_app_eks.cluster_security_group_id
+  value       = module.resqconnect_eks.cluster_security_group_id
 }
 
 output "cluster_oidc_issuer_url" {
   description = "The URL on the EKS cluster for the OpenID Connect identity provider"
-  value       = module.retail_app_eks.cluster_oidc_issuer_url
+  value       = module.resqconnect_eks.cluster_oidc_issuer_url
 }
 
 # =============================================================================
@@ -71,7 +71,7 @@ output "public_subnets" {
 
 output "configure_kubectl" {
   description = "Configure kubectl: make sure you're logged in with the correct AWS profile and run the following command to update your kubeconfig"
-  value       = "aws eks update-kubeconfig --region ${var.aws_region} --name ${module.retail_app_eks.cluster_name}"
+  value       = "aws eks update-kubeconfig --region ${var.aws_region} --name ${module.resqconnect_eks.cluster_name}"
 }
 
 output "argocd_namespace" {
@@ -99,8 +99,8 @@ output "ingress_nginx_loadbalancer" {
   value       = "kubectl get svc -n ingress-nginx ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'"
 }
 
-output "retail_store_url" {
-  description = "Command to get the retail store application URL"
+output "resqconnect_app_url" {
+  description = "Command to get the ResQConnect application URL"
   value       = "echo 'http://'$(kubectl get svc -n ingress-nginx ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')"
 }
 
@@ -113,7 +113,7 @@ output "useful_commands" {
   value = {
     get_nodes           = "kubectl get nodes"
     get_pods_all        = "kubectl get pods -A"
-    get_retail_store    = "kubectl get pods -n retail-store"
+    get_resqconnect_app = "kubectl get pods -n resqconnect"
     argocd_apps         = "kubectl get applications -n ${var.argocd_namespace}"
     ingress_status      = "kubectl get ingress -A"
     describe_cluster    = "kubectl cluster-info"

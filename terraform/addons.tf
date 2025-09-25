@@ -7,10 +7,10 @@ module "eks_addons" {
   version = "~> 1.0"
 
   # Cluster information
-  cluster_name      = module.retail_app_eks.cluster_name
-  cluster_endpoint  = module.retail_app_eks.cluster_endpoint
-  cluster_version   = module.retail_app_eks.cluster_version
-  oidc_provider_arn = module.retail_app_eks.oidc_provider_arn
+  cluster_name      = module.resqconnect_eks.cluster_name
+  cluster_endpoint  = module.resqconnect_eks.cluster_endpoint
+  cluster_version   = module.resqconnect_eks.cluster_version
+  oidc_provider_arn = module.resqconnect_eks.oidc_provider_arn
 
   # =============================================================================
   # CERT-MANAGER - SSL Certificate Management
@@ -106,5 +106,5 @@ module "eks_addons" {
   #   namespace   = "kube-system"
   # }
 
-  depends_on = [module.retail_app_eks]
+  depends_on = [module.resqconnect_eks]
 }

@@ -1,7 +1,7 @@
-package com.amazon.sample.ui.client.catalog.catalog.size;
+package com.resqconnect.ui.client.catalog.catalog.size;
 
-import com.amazon.sample.ui.client.catalog.models.httputil.HTTPError;
-import com.amazon.sample.ui.client.catalog.models.model.CatalogSizeResponse;
+import com.resqconnect.ui.client.catalog.models.httputil.HTTPError;
+import com.resqconnect.ui.client.catalog.models.model.CatalogSizeResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;

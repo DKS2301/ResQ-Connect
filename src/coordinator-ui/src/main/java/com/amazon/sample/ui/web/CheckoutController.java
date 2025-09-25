@@ -16,16 +16,16 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.web;
+package com.resqconnect.ui.web;
 
-import com.amazon.sample.ui.services.checkout.CheckoutService;
-import com.amazon.sample.ui.services.checkout.model.Checkout;
-import com.amazon.sample.ui.services.checkout.model.ShippingAddress;
-import com.amazon.sample.ui.web.payload.CheckoutDeliveryMethodRequest;
-import com.amazon.sample.ui.web.payload.PaymentDetailsRequest;
-import com.amazon.sample.ui.web.payload.ShippingAddressRequest;
-import com.amazon.sample.ui.web.util.RequiresCommonAttributes;
-import com.amazon.sample.ui.web.util.SessionIDUtil;
+import com.resqconnect.ui.services.checkout.CheckoutService;
+import com.resqconnect.ui.services.checkout.model.Checkout;
+import com.resqconnect.ui.services.checkout.model.ShippingAddress;
+import com.resqconnect.ui.web.payload.CheckoutDeliveryMethodRequest;
+import com.resqconnect.ui.web.payload.PaymentDetailsRequest;
+import com.resqconnect.ui.web.payload.ShippingAddressRequest;
+import com.resqconnect.ui.web.util.RequiresCommonAttributes;
+import com.resqconnect.ui.web.util.SessionIDUtil;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

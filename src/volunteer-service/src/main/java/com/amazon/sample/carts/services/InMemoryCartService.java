@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.services;
+package com.resqconnect.volunteer.services;
 
-import com.amazon.sample.carts.repositories.CartEntity;
-import com.amazon.sample.carts.repositories.ItemEntity;
+import com.resqconnect.volunteer.repositories.CartEntity;
+import com.resqconnect.volunteer.repositories.ItemEntity;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,26 +30,26 @@ import lombok.Data;
 
 public class InMemoryCartService implements CartService {
 
-  private final Map<String, Cart> carts;
+  private final Map<String, Cart> volunteers;
 
   public InMemoryCartService() {
-    this.carts = new HashMap<>();
+    this.volunteers = new HashMap<>();
   }
 
   @Override
   public Cart get(String customerId) {
-    if (!this.carts.containsKey(customerId)) {
+    if (!this.volunteers.containsKey(customerId)) {
       Cart cart = new Cart(customerId);
 
-      this.carts.put(customerId, cart);
+      this.volunteers.put(customerId, cart);
     }
 
-    return this.carts.get(customerId);
+    return this.volunteers.get(customerId);
   }
 
   @Override
   public void delete(String customerId) {
-    this.carts.remove(customerId);
+    this.volunteers.remove(customerId);
   }
 
   @Override
@@ -117,7 +117,7 @@ public class InMemoryCartService implements CartService {
 
   @Override
   public boolean exists(String customerId) {
-    return this.carts.containsKey(customerId);
+    return this.volunteers.containsKey(customerId);
   }
 }
 

@@ -27,11 +27,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/aws-containers/retail-store-sample-app/catalog/api"
-	"github.com/aws-containers/retail-store-sample-app/catalog/config"
-	"github.com/aws-containers/retail-store-sample-app/catalog/controller"
-	"github.com/aws-containers/retail-store-sample-app/catalog/middleware"
-	"github.com/aws-containers/retail-store-sample-app/catalog/repository"
+	"github.com/aws-containers/retail-store-sample-app/request/api"
+	"github.com/aws-containers/retail-store-sample-app/request/config"
+	"github.com/aws-containers/retail-store-sample-app/request/controller"
+	"github.com/aws-containers/retail-store-sample-app/request/middleware"
+	"github.com/aws-containers/retail-store-sample-app/request/repository"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/sethvargo/go-envconfig/pkg/envconfig"
@@ -50,7 +50,7 @@ import (
 
 // @title Catalog API
 // @version 1.0
-// @description This API serves the product catalog
+// @description This API serves the product request
 
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
@@ -102,16 +102,16 @@ func main() {
 
 	chaosController.SetupChaosRoutes(r)
 
-	catalog := r.Group("/catalog")
+	request := r.Group("/request")
 
-	catalog.Use(chaosController.ChaosMiddleware())
-	catalog.Use(otelgin.Middleware("catalog-server"))
+	request.Use(chaosController.ChaosMiddleware())
+	request.Use(otelgin.Middleware("request-server"))
 
-	catalog.GET("/products", c.GetProducts)
+	request.GET("/products", c.GetProducts)
 
-	catalog.GET("/size", c.CatalogSize)
-	catalog.GET("/tags", c.ListTags)
-	catalog.GET("/products/:id", c.GetProduct)
+	request.GET("/size", c.CatalogSize)
+	request.GET("/tags", c.ListTags)
+	request.GET("/products/:id", c.GetProduct)
 
 	r.GET("/health", func(c *gin.Context) {
 		if !chaosController.IsHealthy() {

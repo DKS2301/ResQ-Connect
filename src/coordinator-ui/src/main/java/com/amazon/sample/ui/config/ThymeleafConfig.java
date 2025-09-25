@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.config;
+package com.resqconnect.ui.config;
 
-import com.amazon.sample.ui.web.dialect.DynamicColSpanProcessor;
-import com.amazon.sample.ui.web.dialect.TopologyInformationStatusProcessor;
+import com.resqconnect.ui.web.dialect.DynamicColSpanProcessor;
+import com.resqconnect.ui.web.dialect.TopologyInformationStatusProcessor;
 import java.util.HashSet;
 import java.util.Set;
 import org.springframework.context.annotation.Bean;

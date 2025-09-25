@@ -1,6 +1,6 @@
-package com.amazon.sample.ui.client.catalog;
+package com.resqconnect.ui.client.catalog;
 
-import com.amazon.sample.ui.client.catalog.catalog.CatalogRequestBuilder;
+import com.resqconnect.ui.client.catalog.catalog.CatalogRequestBuilder;
 import com.microsoft.kiota.ApiClientBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;

@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.config.messaging;
+package com.resqconnect.matching.config.messaging;
 
-import com.amazon.sample.orders.messaging.MessagingProvider;
-import com.amazon.sample.orders.messaging.inmemory.InMemoryMessagingProvider;
+import com.resqconnect.matching.messaging.MessagingProvider;
+import com.resqconnect.matching.messaging.inmemory.InMemoryMessagingProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;

@@ -1,7 +1,7 @@
-package com.amazon.sample.ui.client.checkout.checkout.item.update;
+package com.resqconnect.ui.client.checkout.checkout.item.update;
 
-import com.amazon.sample.ui.client.checkout.models.Checkout;
-import com.amazon.sample.ui.client.checkout.models.CheckoutRequest;
+import com.resqconnect.ui.client.checkout.models.Checkout;
+import com.resqconnect.ui.client.checkout.models.CheckoutRequest;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;

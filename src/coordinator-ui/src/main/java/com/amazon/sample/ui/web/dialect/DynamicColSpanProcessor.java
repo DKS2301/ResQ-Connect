@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.web.dialect;
+package com.resqconnect.ui.web.dialect;
 
 import org.thymeleaf.IEngineConfiguration;
 import org.thymeleaf.context.ITemplateContext;

@@ -16,11 +16,11 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.checkout;
+package com.resqconnect.ui.services.checkout;
 
-import com.amazon.sample.ui.services.checkout.model.Checkout;
-import com.amazon.sample.ui.services.checkout.model.CheckoutSubmitted;
-import com.amazon.sample.ui.services.checkout.model.ShippingAddress;
+import com.resqconnect.ui.services.checkout.model.Checkout;
+import com.resqconnect.ui.services.checkout.model.CheckoutSubmitted;
+import com.resqconnect.ui.services.checkout.model.ShippingAddress;
 import reactor.core.publisher.Mono;
 
 public interface CheckoutService {

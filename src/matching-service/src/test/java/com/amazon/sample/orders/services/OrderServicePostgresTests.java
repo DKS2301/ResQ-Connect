@@ -16,15 +16,15 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.services;
+package com.resqconnect.matching.services;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasSize;
 
-import com.amazon.sample.orders.entities.OrderEntity;
-import com.amazon.sample.orders.entities.OrderItemEntity;
-import com.amazon.sample.orders.entities.ShippingAddressEntity;
-import com.amazon.sample.orders.repositories.OrderRepository;
+import com.resqconnect.matching.entities.OrderEntity;
+import com.resqconnect.matching.entities.OrderItemEntity;
+import com.resqconnect.matching.entities.ShippingAddressEntity;
+import com.resqconnect.matching.repositories.OrderRepository;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import java.util.List;
@@ -63,14 +63,14 @@ public class OrderServicePostgresTests {
 
   @DynamicPropertySource
   static void configureProperties(DynamicPropertyRegistry registry) {
-    registry.add("retail.orders.persistence.provider", () -> "postgres");
+    registry.add("retail.matching.persistence.provider", () -> "postgres");
     registry.add(
-      "retail.orders.persistence.endpoint",
+      "retail.matching.persistence.endpoint",
       () -> postgres.getHost() + ":" + postgres.getMappedPort(5432)
     );
-    registry.add("retail.orders.persistence.username", postgres::getUsername);
-    registry.add("retail.orders.persistence.password", postgres::getPassword);
-    registry.add("retail.orders.persistence.name", postgres::getDatabaseName);
+    registry.add("retail.matching.persistence.username", postgres::getUsername);
+    registry.add("retail.matching.persistence.password", postgres::getPassword);
+    registry.add("retail.matching.persistence.name", postgres::getDatabaseName);
   }
 
   @Autowired
@@ -87,7 +87,7 @@ public class OrderServicePostgresTests {
     given()
       .contentType(ContentType.JSON)
       .when()
-      .get("/orders")
+      .get("/matching")
       .then()
       .statusCode(200)
       .body(".", hasSize(0));
@@ -97,7 +97,7 @@ public class OrderServicePostgresTests {
   void shouldGetAllOrders() {
     var items = List.of(new OrderItemEntity("123", 1, 10, 10));
 
-    List<OrderEntity> orders = List.of(
+    List<OrderEntity> matching = List.of(
       new OrderEntity(
         items,
         new ShippingAddressEntity(
@@ -125,12 +125,12 @@ public class OrderServicePostgresTests {
         )
       )
     );
-    orderRepository.saveAll(orders);
+    orderRepository.saveAll(matching);
 
     given()
       .contentType(ContentType.JSON)
       .when()
-      .get("/orders")
+      .get("/matching")
       .then()
       .statusCode(200)
       .body(".", hasSize(2));

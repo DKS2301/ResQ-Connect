@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.messaging.rabbitmq;
+package com.resqconnect.matching.messaging.rabbitmq;
 
-import com.amazon.sample.orders.config.messaging.RabbitMQMessagingConfig;
-import com.amazon.sample.orders.messaging.MessagingProvider;
+import com.resqconnect.matching.config.messaging.RabbitMQMessagingConfig;
+import com.resqconnect.matching.messaging.MessagingProvider;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 public class RabbitMQMessagingProvider implements MessagingProvider {

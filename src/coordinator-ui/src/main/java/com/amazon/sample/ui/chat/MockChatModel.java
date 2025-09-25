@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.chat;
+package com.resqconnect.ui.chat;
 
 import java.util.List;
 import org.springframework.ai.chat.messages.AssistantMessage;

@@ -1,5 +1,5 @@
 apiVersion: v2
-name: ingest-service
+name: resqconnect-ingest-service-chart
 description: ResQConnect Ingest Service - SMS/WhatsApp/Form ingestion
 type: application
 version: 0.1.0

@@ -1,8 +1,8 @@
-package com.amazon.sample.ui.client.catalog.catalog.products;
+package com.resqconnect.ui.client.catalog.catalog.products;
 
-import com.amazon.sample.ui.client.catalog.catalog.products.item.ProductsItemRequestBuilder;
-import com.amazon.sample.ui.client.catalog.models.httputil.HTTPError;
-import com.amazon.sample.ui.client.catalog.models.model.Product;
+import com.resqconnect.ui.client.catalog.catalog.products.item.ProductsItemRequestBuilder;
+import com.resqconnect.ui.client.catalog.models.httputil.HTTPError;
+import com.resqconnect.ui.client.catalog.models.model.Product;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -24,7 +24,7 @@ import java.util.Objects;
 public class ProductsRequestBuilder extends BaseRequestBuilder {
 
   /**
-   * Gets an item from the com.amazon.sample.ui.client.catalog.catalog.products.item collection
+   * Gets an item from the com.resqconnect.ui.client.catalog.catalog.products.item collection
    * @param id product ID
    * @return a {@link ProductsItemRequestBuilder}
    */

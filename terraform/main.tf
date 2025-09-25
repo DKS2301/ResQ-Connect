@@ -47,7 +47,7 @@ module "vpc" {
 # EKS CLUSTER CONFIGURATION
 # =============================================================================
 
-module "retail_app_eks" {
+module "resqconnect_eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.31"
 
@@ -70,10 +70,11 @@ module "retail_app_eks" {
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
 
-  # KMS configuration to avoid conflicts
-  create_kms_key = true
-  kms_key_description = "EKS cluster ${local.cluster_name} encryption key"
-  kms_key_deletion_window_in_days = 7
+  # Disable KMS key creation to avoid permissions issues
+  create_kms_key = false
+  
+  # Disable encryption config when not using KMS
+  cluster_encryption_config = {}
   
   # Cluster logging (optional - can be expensive)
   cluster_enabled_log_types = []

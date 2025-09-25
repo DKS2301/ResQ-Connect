@@ -17,9 +17,9 @@
  * Testing comment
  */
 
-package com.amazon.sample.orders;
+package com.resqconnect.matching;
 
-import com.amazon.sample.orders.config.messaging.ApplicationEnvironmentPreparedListener;
+import com.resqconnect.matching.config.messaging.ApplicationEnvironmentPreparedListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

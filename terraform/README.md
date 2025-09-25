@@ -1,11 +1,11 @@
-# Retail Store Terraform Infrastructure
+# ResQConnect Terraform Infrastructure
 
-This directory contains the Terraform configuration for deploying the retail store application infrastructure on AWS EKS.
+This directory contains the Terraform configuration for deploying the ResQConnect application infrastructure on AWS EKS.
 
 ## 📁 File Structure
 
 ```
-terraform-organized/
+terraform/
 ├── main.tf                    # Primary infrastructure (VPC, EKS)
 ├── variables.tf               # Input variables
 ├── outputs.tf                 # Output values
@@ -35,7 +35,7 @@ cp terraform.tfvars.example terraform.tfvars
 vim terraform.tfvars
 ```
 
-**Note**: The cluster name will automatically have a random 4-character suffix added (e.g., `retail-store-a1b2`) to prevent resource conflicts and ensure uniqueness.
+**Note**: The cluster name will automatically have a random 4-character suffix added (e.g., `resqconnect-a1b2`) to prevent resource conflicts and ensure uniqueness.
 
 ### 3. Deploy Infrastructure
 
@@ -47,7 +47,7 @@ You can deploy in two phases for better control:
 terraform init
 
 # Deploy only the EKS cluster and VPC
-terraform apply -target=module.retail_app_eks -target=module.vpc --auto-approve
+terraform apply -target=module.resqconnect_eks -target=module.vpc --auto-approve
 ```
 
 #### Phase 2: Deploy Add-ons and ArgoCD
@@ -78,7 +78,7 @@ terraform apply
 
 ```bash
 # Update kubeconfig (replace with your region and cluster name)
-aws eks update-kubeconfig --region us-west-2 --name retail-store
+aws eks update-kubeconfig --region us-west-2 --name resqconnect
 ```
 
 ### 5. Access ArgoCD
@@ -108,16 +108,15 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 - **ArgoCD** for GitOps deployment
 
 ### Applications (via ArgoCD)
-- Retail Store microservices (UI, Catalog, Cart, Orders, Checkout)
+- ResQConnect microservices
 
 ## 🔧 Customization
 
 ### Variables
 
-
 ```hcl
 aws_region                = "us-west-2"
-cluster_name              = "retail-store"        # Will have random suffix added
+cluster_name              = "resqconnect"        # Will have random suffix added
 environment               = "dev"
 kubernetes_version        = "1.33"
 vpc_cidr                  = "10.0.0.0/16"
@@ -161,8 +160,7 @@ Internet
 │  (Auto Mode)    │
 │                 │
 │  ┌───────────┐  │
-│  │  Retail   │  │
-│  │   Store   │  │
+│  │ResQConnect│  │
 │  │   Apps    │  │
 │  └───────────┘  │
 │                 │
@@ -181,4 +179,3 @@ terraform destroy
 ```
 
 **Note**: This will delete all resources including the EKS cluster and VPC. Make sure to backup any important data first.
-

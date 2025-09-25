@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.config;
+package com.resqconnect.volunteer.config;
 
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
@@ -28,8 +28,8 @@ public class OpenAPIConfig {
   @Bean
   public GroupedOpenApi publicApi() {
     return GroupedOpenApi.builder()
-      .group("carts")
-      .pathsToMatch("/carts/**")
+      .group("volunteers")
+      .pathsToMatch("/volunteers/**")
       .build();
   }
 }

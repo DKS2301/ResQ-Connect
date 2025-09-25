@@ -1,6 +1,6 @@
-package com.amazon.sample.ui.client.checkout;
+package com.resqconnect.ui.client.checkout;
 
-import com.amazon.sample.ui.client.checkout.checkout.CheckoutRequestBuilder;
+import com.resqconnect.ui.client.checkout.checkout.CheckoutRequestBuilder;
 import com.microsoft.kiota.ApiClientBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;

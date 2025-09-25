@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.web.api;
+package com.resqconnect.volunteer.web.api;
 
-import com.amazon.sample.carts.repositories.ItemEntity;
+import com.resqconnect.volunteer.repositories.ItemEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

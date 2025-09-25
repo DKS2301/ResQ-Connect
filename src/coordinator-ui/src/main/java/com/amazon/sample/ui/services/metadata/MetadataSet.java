@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.metadata;
+package com.resqconnect.ui.services.metadata;
 
 import java.util.ArrayList;
 import java.util.List;

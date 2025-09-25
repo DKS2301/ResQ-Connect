@@ -1,4 +1,4 @@
-package com.amazon.sample.orders.config;
+package com.resqconnect.matching.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

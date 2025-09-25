@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.config.messaging;
+package com.resqconnect.matching.config.messaging;
 
-import com.amazon.sample.orders.messaging.MessagingProvider;
-import com.amazon.sample.orders.messaging.rabbitmq.RabbitMQMessagingProvider;
+import com.resqconnect.matching.messaging.MessagingProvider;
+import com.resqconnect.matching.messaging.rabbitmq.RabbitMQMessagingProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -56,9 +56,9 @@ public class RabbitMQMessagingConfig
   @Autowired
   private RabbitMQProperties properties;
 
-  public static final String EXCHANGE_NAME = "orders-exchange";
+  public static final String EXCHANGE_NAME = "matching-exchange";
 
-  public static final String ORDERS_ORDERS_QUEUE = "orders-orders-queue";
+  public static final String ORDERS_ORDERS_QUEUE = "matching-matching-queue";
 
   @Bean
   public MessagingProvider messagingProvider(RabbitTemplate template) {

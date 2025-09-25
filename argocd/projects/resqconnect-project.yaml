@@ -7,7 +7,7 @@ spec:
   description: ResQConnect - Community Calamity Response Network
   
   sourceRepos:
-    - 'https://github.com/DKS2301/retail-store-sample-app'
+    - 'https://github.com/DKS2301/ResQ-Connect'
   
   destinations:
     - namespace: resqconnect

@@ -1,6 +1,6 @@
-package com.amazon.sample.orders.web.payload;
+package com.resqconnect.matching.web.payload;
 
-import com.amazon.sample.orders.entities.OrderItemEntity;
+import com.resqconnect.matching.entities.OrderItemEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

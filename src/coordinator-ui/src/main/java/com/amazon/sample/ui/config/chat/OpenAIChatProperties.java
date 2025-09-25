@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.config.chat;
+package com.resqconnect.ui.config.chat;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

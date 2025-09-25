@@ -1,8 +1,8 @@
 {
-  "name": "catalog",
+  "name": "request",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "src/catalog",
+  "sourceRoot": "src/request",
   "targets": {
     "build": {
       "executor": "nx:run-commands",
@@ -46,7 +46,7 @@
     "update-samples": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "src/catalog",
+        "cwd": "src/request",
         "command": "cp ../../samples/data/* repository"
       }
     }

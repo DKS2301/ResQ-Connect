@@ -16,15 +16,15 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.catalog.model;
+package com.resqconnect.ui.services.catalog.model;
 
 import org.mapstruct.Mapper;
 
 @Mapper
 public interface CatalogMapper {
   Product product(
-    com.amazon.sample.ui.client.catalog.models.model.Product product
+    com.resqconnect.ui.client.catalog.models.model.Product product
   );
 
-  ProductTag tag(com.amazon.sample.ui.client.catalog.models.model.Tag tag);
+  ProductTag tag(com.resqconnect.ui.client.catalog.models.model.Tag tag);
 }

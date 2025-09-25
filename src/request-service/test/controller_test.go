@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/aws-containers/retail-store-sample-app/catalog/model"
+	"github.com/aws-containers/retail-store-sample-app/request/model"
 )
 
 func TestCatalogList(t *testing.T) {
-	writer := makeRequest("GET", "/catalog", nil)
+	writer := makeRequest("GET", "/request", nil)
 
 	assert.Equal(t, http.StatusOK, writer.Code)
 
@@ -22,7 +22,7 @@ func TestCatalogList(t *testing.T) {
 }
 
 func TestCatalogProduct(t *testing.T) {
-	writer := makeRequest("GET", "/catalog/product/cc789f85-1476-452a-8100-9e74502198e0", nil)
+	writer := makeRequest("GET", "/request/product/cc789f85-1476-452a-8100-9e74502198e0", nil)
 
 	assert.Equal(t, http.StatusOK, writer.Code)
 
@@ -33,7 +33,7 @@ func TestCatalogProduct(t *testing.T) {
 }
 
 func TestCatalogProductMissing(t *testing.T) {
-	writer := makeRequest("GET", "/catalog/product/missing", nil)
+	writer := makeRequest("GET", "/request/product/missing", nil)
 
 	assert.Equal(t, http.StatusNotFound, writer.Code)
 }

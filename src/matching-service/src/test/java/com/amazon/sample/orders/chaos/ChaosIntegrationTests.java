@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.chaos;
+package com.resqconnect.matching.chaos;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -40,7 +40,7 @@ class ChaosServiceIntegrationTest {
     restTemplate.postForEntity("/chaos/status/503", null, Map.class);
 
     ResponseEntity<String> response = restTemplate.getForEntity(
-      "/orders",
+      "/matching",
       String.class
     );
     assertThat(response.getStatusCode(), is(HttpStatus.SERVICE_UNAVAILABLE));
@@ -52,7 +52,7 @@ class ChaosServiceIntegrationTest {
     restTemplate.postForEntity("/chaos/latency/" + latencyMs, null, Map.class);
 
     long startTime = System.currentTimeMillis();
-    restTemplate.getForEntity("/orders", String.class);
+    restTemplate.getForEntity("/matching", String.class);
     long endTime = System.currentTimeMillis();
 
     long duration = endTime - startTime;

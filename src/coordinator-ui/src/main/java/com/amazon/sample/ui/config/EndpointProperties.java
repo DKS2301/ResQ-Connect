@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.config;
+package com.resqconnect.ui.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

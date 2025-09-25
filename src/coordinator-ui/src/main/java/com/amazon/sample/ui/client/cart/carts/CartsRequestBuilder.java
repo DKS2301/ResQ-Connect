@@ -1,6 +1,6 @@
-package com.amazon.sample.ui.client.cart.carts;
+package com.resqconnect.ui.client.cart.carts;
 
-import com.amazon.sample.ui.client.cart.carts.item.WithCustomerItemRequestBuilder;
+import com.resqconnect.ui.client.cart.carts.item.WithCustomerItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import java.util.Objects;
 public class CartsRequestBuilder extends BaseRequestBuilder {
 
   /**
-   * Gets an item from the com.amazon.sample.ui.client.cart.carts.item collection
+   * Gets an item from the com.resqconnect.ui.client.cart.carts.item collection
    * @param customerId Unique identifier of the item
    * @return a {@link WithCustomerItemRequestBuilder}
    */

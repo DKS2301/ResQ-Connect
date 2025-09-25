@@ -1,6 +1,6 @@
-package com.amazon.sample.ui.web.dialect;
+package com.resqconnect.ui.web.dialect;
 
-import com.amazon.sample.ui.web.util.TopologyInformation;
+import com.resqconnect.ui.web.util.TopologyInformation;
 import org.thymeleaf.IEngineConfiguration;
 import org.thymeleaf.context.ITemplateContext;
 import org.thymeleaf.engine.AttributeName;

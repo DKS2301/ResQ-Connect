@@ -16,22 +16,22 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.config;
+package com.resqconnect.ui.config;
 
-import com.amazon.sample.ui.client.cart.CartClient;
-import com.amazon.sample.ui.client.catalog.CatalogClient;
-import com.amazon.sample.ui.client.checkout.CheckoutClient;
-import com.amazon.sample.ui.services.carts.CartsService;
-import com.amazon.sample.ui.services.carts.KiotaCartsService;
-import com.amazon.sample.ui.services.carts.MockCartsService;
-import com.amazon.sample.ui.services.catalog.CatalogService;
-import com.amazon.sample.ui.services.catalog.KiotaCatalogService;
-import com.amazon.sample.ui.services.catalog.MockCatalogService;
-import com.amazon.sample.ui.services.catalog.model.CatalogMapper;
-import com.amazon.sample.ui.services.checkout.CheckoutService;
-import com.amazon.sample.ui.services.checkout.KiotaCheckoutService;
-import com.amazon.sample.ui.services.checkout.MockCheckoutService;
-import com.amazon.sample.ui.services.checkout.model.CheckoutMapper;
+import com.resqconnect.ui.client.cart.CartClient;
+import com.resqconnect.ui.client.catalog.CatalogClient;
+import com.resqconnect.ui.client.checkout.CheckoutClient;
+import com.resqconnect.ui.services.carts.CartsService;
+import com.resqconnect.ui.services.carts.KiotaCartsService;
+import com.resqconnect.ui.services.carts.MockCartsService;
+import com.resqconnect.ui.services.catalog.CatalogService;
+import com.resqconnect.ui.services.catalog.KiotaCatalogService;
+import com.resqconnect.ui.services.catalog.MockCatalogService;
+import com.resqconnect.ui.services.catalog.model.CatalogMapper;
+import com.resqconnect.ui.services.checkout.CheckoutService;
+import com.resqconnect.ui.services.checkout.KiotaCheckoutService;
+import com.resqconnect.ui.services.checkout.MockCheckoutService;
+import com.resqconnect.ui.services.checkout.model.CheckoutMapper;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
 import com.microsoft.kiota.bundle.DefaultRequestAdapter;

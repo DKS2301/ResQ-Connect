@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.web;
+package com.resqconnect.volunteer.web;
 
-import com.amazon.sample.carts.config.DynamoDBProperties;
+import com.resqconnect.volunteer.config.DynamoDBProperties;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;

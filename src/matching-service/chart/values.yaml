@@ -1,10 +1,10 @@
-# Default values for orders.
+# Default values for matching-service.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 image:
-  repository: 739275464689.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
+  repository: 739275464689.dkr.ecr.us-west-2.amazonaws.com/resqconnect-matching-service
   pullPolicy: Always
   tag: "53f0d93"
 imagePullSecrets:
@@ -79,7 +79,7 @@ app:
 postgresql:
   create: false
   image:
-    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
+    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/resqconnect-matching-service
     pullPolicy: IfNotPresent
     tag: "3b4d73a"
   service:
@@ -100,7 +100,7 @@ postgresql:
 rabbitmq:
   create: false
   image:
-    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
+    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/resqconnect-matching-service
     pullPolicy: IfNotPresent
     tag: "3b4d73a"
   service:
@@ -131,3 +131,30 @@ podDisruptionBudget:
   enabled: false
   minAvailable: 2
   maxUnavailable: 1
+
+# ResQConnect additions (non-invasive defaults)
+eventBus:
+  provider: kafka
+  brokers: []
+  topics:
+    requestCreated: "request.created"
+    requestEnriched: "request.enriched"
+    matchProposed: "match.proposed"
+    matchAccepted: "match.accepted"
+
+datastores:
+  redisUrl: ""
+  neo4jUri: ""
+  postgresUrl: ""
+
+otel:
+  exporterOtlpEndpoint: ""
+  resourceAttributes:
+    serviceName: "matching-service"
+
+security:
+  jwt:
+    issuer: ""
+    audience: ""
+  mtls:
+    enabled: false

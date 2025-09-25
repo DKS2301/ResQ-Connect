@@ -16,10 +16,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.carts.config;
+package com.resqconnect.volunteer.config;
 
-import com.amazon.sample.carts.services.CartService;
-import com.amazon.sample.carts.services.InMemoryCartService;
+import com.resqconnect.volunteer.services.CartService;
+import com.resqconnect.volunteer.services.InMemoryCartService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;

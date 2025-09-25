@@ -16,16 +16,16 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.checkout;
+package com.resqconnect.ui.services.checkout;
 
-import com.amazon.sample.ui.services.carts.CartsService;
-import com.amazon.sample.ui.services.carts.model.Cart;
-import com.amazon.sample.ui.services.checkout.model.Checkout;
-import com.amazon.sample.ui.services.checkout.model.CheckoutItem;
-import com.amazon.sample.ui.services.checkout.model.CheckoutMapper;
-import com.amazon.sample.ui.services.checkout.model.CheckoutSubmitted;
-import com.amazon.sample.ui.services.checkout.model.ShippingAddress;
-import com.amazon.sample.ui.services.checkout.model.ShippingOption;
+import com.resqconnect.ui.services.carts.CartsService;
+import com.resqconnect.ui.services.carts.model.Cart;
+import com.resqconnect.ui.services.checkout.model.Checkout;
+import com.resqconnect.ui.services.checkout.model.CheckoutItem;
+import com.resqconnect.ui.services.checkout.model.CheckoutMapper;
+import com.resqconnect.ui.services.checkout.model.CheckoutSubmitted;
+import com.resqconnect.ui.services.checkout.model.ShippingAddress;
+import com.resqconnect.ui.services.checkout.model.ShippingOption;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

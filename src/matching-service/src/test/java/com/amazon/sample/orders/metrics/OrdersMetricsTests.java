@@ -16,13 +16,13 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.metrics;
+package com.resqconnect.matching.metrics;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
-import com.amazon.sample.events.orders.Order;
-import com.amazon.sample.events.orders.OrderCreatedEvent;
-import com.amazon.sample.orders.entities.OrderItemEntity;
+import com.amazon.sample.events.matching.Order;
+import com.amazon.sample.events.matching.OrderCreatedEvent;
+import com.resqconnect.matching.entities.OrderItemEntity;
 import io.micrometer.core.instrument.*;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import java.util.ArrayList;
@@ -51,7 +51,7 @@ public class OrdersMetricsTests {
 
   @Test
   void testCreateCounterAndIncrement() {
-    OrdersMetrics ordersMetrics = new OrdersMetrics(meterRegistry);
+    OrdersMetrics matchingMetrics = new OrdersMetrics(meterRegistry);
 
     OrderCreatedEvent event = new OrderCreatedEvent();
     Order order = new Order();
@@ -63,24 +63,24 @@ public class OrdersMetricsTests {
 
     order.setOrderItems(orderItems);
     event.setOrder(order);
-    ordersMetrics.onOrderCreated(event);
+    matchingMetrics.onOrderCreated(event);
 
     var counter = meterRegistry
-      .get("watch.orders")
+      .get("watch.matching")
       .tags("productId", "*")
       .counter();
     then(counter).isNotNull();
     then(counter.count()).isEqualTo(1);
 
     var woodWatchCounter = meterRegistry
-      .get("watch.orders")
+      .get("watch.matching")
       .tags("productId", PRODUCT_2)
       .counter();
     then(woodWatchCounter).isNotNull();
     then(woodWatchCounter.count()).isEqualTo(2);
 
     var pocketWatchCounter = meterRegistry
-      .get("watch.orders")
+      .get("watch.matching")
       .tags("productId", PRODUCT_1)
       .counter();
     then(pocketWatchCounter).isNotNull();
@@ -90,7 +90,7 @@ public class OrdersMetricsTests {
     then(watchGauge).isNotNull();
     then(watchGauge.value()).isEqualTo(600.0);
 
-    ordersMetrics.onOrderCreated(event);
+    matchingMetrics.onOrderCreated(event);
 
     then(watchGauge.value()).isEqualTo(1200.0);
   }

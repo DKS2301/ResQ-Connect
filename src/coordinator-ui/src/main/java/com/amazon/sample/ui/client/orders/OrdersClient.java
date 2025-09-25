@@ -1,6 +1,6 @@
-package com.amazon.sample.ui.client.orders;
+package com.resqconnect.ui.client.orders;
 
-import com.amazon.sample.ui.client.orders.orders.OrdersRequestBuilder;
+import com.resqconnect.ui.client.orders.orders.OrdersRequestBuilder;
 import com.microsoft.kiota.ApiClientBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;

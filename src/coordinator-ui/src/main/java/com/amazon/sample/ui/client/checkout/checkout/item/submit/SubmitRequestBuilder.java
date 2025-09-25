@@ -1,6 +1,6 @@
-package com.amazon.sample.ui.client.checkout.checkout.item.submit;
+package com.resqconnect.ui.client.checkout.checkout.item.submit;
 
-import com.amazon.sample.ui.client.checkout.models.CheckoutSubmitted;
+import com.resqconnect.ui.client.checkout.models.CheckoutSubmitted;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;

@@ -1,4 +1,4 @@
-package com.amazon.sample.ui.client.checkout.models;
+package com.resqconnect.ui.client.checkout.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

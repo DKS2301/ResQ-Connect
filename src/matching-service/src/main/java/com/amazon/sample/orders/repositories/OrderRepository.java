@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.repositories;
+package com.resqconnect.matching.repositories;
 
-import com.amazon.sample.orders.entities.OrderEntity;
+import com.resqconnect.matching.entities.OrderEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

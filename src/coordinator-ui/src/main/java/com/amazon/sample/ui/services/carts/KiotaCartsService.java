@@ -16,14 +16,14 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.carts;
+package com.resqconnect.ui.services.carts;
 
-import com.amazon.sample.ui.client.cart.CartClient;
-import com.amazon.sample.ui.client.cart.models.Item;
-import com.amazon.sample.ui.services.carts.model.Cart;
-import com.amazon.sample.ui.services.carts.model.CartItem;
-import com.amazon.sample.ui.services.catalog.CatalogService;
-import com.amazon.sample.ui.services.catalog.model.Product;
+import com.resqconnect.ui.client.cart.CartClient;
+import com.resqconnect.ui.client.cart.models.Item;
+import com.resqconnect.ui.services.carts.model.Cart;
+import com.resqconnect.ui.services.carts.model.CartItem;
+import com.resqconnect.ui.services.catalog.CatalogService;
+import com.resqconnect.ui.services.catalog.model.Product;
 import java.util.List;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -86,7 +86,7 @@ public class KiotaCartsService implements CartsService {
   }
 
   private Mono<Cart> createCart(
-    com.amazon.sample.ui.client.cart.models.Cart cart
+    com.resqconnect.ui.client.cart.models.Cart cart
   ) {
     return Mono.just(cart)
       .flatMapMany(c -> Flux.fromIterable(c.getItems()))

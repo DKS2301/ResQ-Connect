@@ -1,7 +1,7 @@
-package com.amazon.sample.ui.client.orders.orders;
+package com.resqconnect.ui.client.orders.orders;
 
-import com.amazon.sample.ui.client.orders.models.ExistingOrder;
-import com.amazon.sample.ui.client.orders.models.Order;
+import com.resqconnect.ui.client.orders.models.ExistingOrder;
+import com.resqconnect.ui.client.orders.models.Order;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;

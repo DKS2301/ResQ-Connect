@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.config;
+package com.resqconnect.matching.config;
 
-import com.amazon.sample.orders.entities.OrderEntity;
+import com.resqconnect.matching.entities.OrderEntity;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.UUID;

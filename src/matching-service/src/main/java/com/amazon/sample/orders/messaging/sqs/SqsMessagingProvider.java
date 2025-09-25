@@ -16,9 +16,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.messaging.sqs;
+package com.resqconnect.matching.messaging.sqs;
 
-import com.amazon.sample.orders.messaging.MessagingProvider;
+import com.resqconnect.matching.messaging.MessagingProvider;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.awspring.cloud.sqs.operations.SqsOperations;

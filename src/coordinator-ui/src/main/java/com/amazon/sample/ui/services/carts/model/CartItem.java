@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.ui.services.carts.model;
+package com.resqconnect.ui.services.carts.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -16,7 +16,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.amazon.sample.orders.web.payload;
+package com.resqconnect.matching.web.payload;
 
 import lombok.Data;
 
