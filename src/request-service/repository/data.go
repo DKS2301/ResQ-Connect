@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-//go,s:embed products.json
+//go:embed products.json
 var productsString []byte
 
 //go:embed tags.json

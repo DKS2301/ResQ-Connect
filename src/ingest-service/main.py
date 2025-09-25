@@ -1,6 +1,6 @@
 """
 ResQConnect Ingest Service
-Handles SMS, WhatsApp, and form submissions for disaster relief request
+Handles SMS, WhatsApp, and form submissions for disaster relief requests
 """
 
 from fastapi import FastAPI, HTTPException, Request, Form

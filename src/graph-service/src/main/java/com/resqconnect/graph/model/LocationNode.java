@@ -20,7 +20,7 @@ public class LocationNode {
     private Double longitude;
     
     @Property("type")
-    private String type; // hospital, shelters, supply_center, etc.
+    private String type; // hospital, shelter, supply_center, etc.
 
     // Constructors
     public LocationNode() {}

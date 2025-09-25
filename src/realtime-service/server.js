@@ -13,7 +13,7 @@ const compression = require('compression');
 const promClient = require('prom-client');
 const winston = require('winston');
 
-// Configure loggings
+// Configure logging
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.combine(
