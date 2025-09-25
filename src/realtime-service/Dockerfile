@@ -10,8 +10,7 @@ RUN npm ci --only=production
 COPY . .
 
 # Create non-root user
-RUN addgroup -g 1000 appuser && \
-    adduser -u 1000 -G appuser -s /bin/sh -D appuser && \
+RUN adduser -D -s /bin/sh appuser && \
     chown -R appuser:appuser /app
 
 USER appuser
