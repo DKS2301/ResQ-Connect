@@ -35,7 +35,7 @@ jobs:
             services=(coordinator-ui request-service volunteer-service matching-service notification-service ingest-service nlp-service graph-service realtime-service analytics-service)
           fi
           
-          echo "services=$(printf '%s\n' "${services[@]}" | jq -R . | jq -s .)" >> $GITHUB_OUTPUT
+          echo "services=$(printf '%s\n' "${services[@]}" | jq -R . | jq -s -c .)" >> $GITHUB_OUTPUT
 
   build-and-push:
     needs: detect-changes
