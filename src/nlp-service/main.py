@@ -1,5 +1,5 @@
 """
-ResQConnect NLP Service
+ResQConnect NLP Services
 Handles intent extraction, entity recognition, and geocoding
 """
 
