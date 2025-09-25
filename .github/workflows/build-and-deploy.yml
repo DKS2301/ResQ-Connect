@@ -1,0 +1,94 @@
+name: Build and Deploy ResQConnect Services
+
+on:
+  push:
+    branches: [ gitops ]
+    paths: [ 'src/**' ]
+  workflow_dispatch:
+
+env:
+  AWS_REGION: us-west-2
+  ECR_REGISTRY: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-west-2.amazonaws.com
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      services: ${{ steps.changes.outputs.services }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      
+      - name: Detect changed services
+        id: changes
+        run: |
+          services=()
+          for service in coordinator-ui request-service volunteer-service matching-service notification-service ingest-service nlp-service graph-service realtime-service analytics-service; do
+            if git diff --name-only HEAD~1 HEAD | grep -q "src/$service/"; then
+              services+=("$service")
+            fi
+          done
+          
+          # If no specific changes detected, build all services
+          if [ ${#services[@]} -eq 0 ]; then
+            services=(coordinator-ui request-service volunteer-service matching-service notification-service ingest-service nlp-service graph-service realtime-service analytics-service)
+          fi
+          
+          echo "services=$(printf '%s\n' "${services[@]}" | jq -R . | jq -s .)" >> $GITHUB_OUTPUT
+
+  build-and-push:
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: ${{ fromJson(needs.detect-changes.outputs.services) }}
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+      
+      - name: Login to ECR
+        uses: aws-actions/amazon-ecr-login@v2
+      
+      - name: Create ECR repository if not exists
+        run: |
+          aws ecr describe-repositories --repository-names resqconnect-${{ matrix.service }} --region ${{ env.AWS_REGION }} || \
+          aws ecr create-repository --repository-name resqconnect-${{ matrix.service }} --region ${{ env.AWS_REGION }}
+      
+      - name: Build and push Docker image
+        run: |
+          cd src/${{ matrix.service }}
+          docker build -t $ECR_REGISTRY/resqconnect-${{ matrix.service }}:${{ github.sha }} .
+          docker push $ECR_REGISTRY/resqconnect-${{ matrix.service }}:${{ github.sha }}
+          docker tag $ECR_REGISTRY/resqconnect-${{ matrix.service }}:${{ github.sha }} $ECR_REGISTRY/resqconnect-${{ matrix.service }}:latest
+          docker push $ECR_REGISTRY/resqconnect-${{ matrix.service }}:latest
+
+  update-helm-charts:
+    needs: [detect-changes, build-and-push]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update Helm chart values
+        run: |
+          for service in $(echo '${{ needs.detect-changes.outputs.services }}' | jq -r '.[]'); do
+            if [ -f "src/$service/chart/values.yaml" ]; then
+              sed -i "s|tag:.*|tag: \"${{ github.sha }}\"|g" src/$service/chart/values.yaml
+            fi
+          done
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/*/chart/values.yaml
+          git diff --staged --quiet || (git commit -m "Update image tags to ${{ github.sha }}" && git push)
