@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   repository: 739275464689.dkr.ecr.us-west-2.amazonaws.com/resqconnect-coordinator-ui
   pullPolicy: Always
-  tag: "55218e7"
+  tag: "e888ada5fcf1c768cdc0280bf1c2e890ed79dbe5"
 imagePullSecrets:
   - name: regcred
 nameOverride: ""
