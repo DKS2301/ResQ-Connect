@@ -4,7 +4,7 @@ replicaCount: 3
 image:
   repository: 739275464689.dkr.ecr.us-west-2.amazonaws.com/resqconnect-realtime-service
   pullPolicy: Always
-  tag: "latest"
+  tag: "193220fe0bd49e55e6e00e6f42c8425543c4e790"
 
 imagePullSecrets:
   - name: regcred
