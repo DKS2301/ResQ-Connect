@@ -4,7 +4,7 @@ replicaCount: 2
 image:
   repository: 739275464689.dkr.ecr.us-west-2.amazonaws.com/resqconnect-graph-service
   pullPolicy: Always
-  tag: "latest"
+  tag: "e8a671d0966616848ffc60de84632ef5fe509917"
 
 imagePullSecrets:
   - name: regcred
@@ -102,7 +102,7 @@ neo4j:
   enabled: true
   image:
     repository: neo4j
-    tag: "5.15.0"
+    tag: "e8a671d0966616848ffc60de84632ef5fe509917"
   service:
     name: neo4j-service
     port: 7687
