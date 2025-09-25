@@ -13,18 +13,17 @@ RUN dnf --setopt=install_weak_deps=False install -q -y \
     dnf clean all
 
 VOLUME /tmp
-WORKDIR /
+WORKDIR /app
 
-COPY .mvn .mvn
-COPY mvnw .
-COPY pom.xml .
+COPY .mvn/ .mvn/
+COPY mvnw pom.xml ./
 
 RUN ./mvnw dependency:go-offline -B -q
 
 COPY ./src ./src
 
 RUN ./mvnw -DskipTests package -q && \
-    mv /target/ui-0.0.1-SNAPSHOT.jar /app.jar
+    mv target/ui-0.0.1-SNAPSHOT.jar /app.jar
 
 # Package Stage
 FROM public.ecr.aws/amazonlinux/amazonlinux:2023
