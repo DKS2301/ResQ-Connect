@@ -14,7 +14,7 @@ from geopy.exc import GeocoderTimedOut
 import redis
 import os
 
-# Configure logging
+# Configure loggings
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

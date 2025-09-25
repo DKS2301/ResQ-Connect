@@ -4,7 +4,7 @@ This Helm chart deploys the Coordinator UI component of the ResQConnect disaster
 
 ## Installation
 
-To install the chart:
+To install the chart :
 
 ```bash
 helm install coordinator-ui oci://public.ecr.aws/aws-containers/resqconnect-coordinator-ui-chart:0.8.5
