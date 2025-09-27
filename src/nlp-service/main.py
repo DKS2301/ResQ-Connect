@@ -1,6 +1,7 @@
 """
 ResQConnect NLP Service
 Handles intent extraction, entity recognition, and geocoding
+Transformed for disaster relief operations
 """
 
 from fastapi import FastAPI, HTTPException

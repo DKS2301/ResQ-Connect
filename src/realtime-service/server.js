@@ -1,6 +1,7 @@
 /**
  * ResQConnect Realtime Service
  * WebSocket server for real-time updates
+ * Transformed for disaster relief operations
  */
 
 const express = require('express');

@@ -37,6 +37,7 @@ async function bootstrap() {
     .addTag('checkout')
     .addServer('http://localhost:8000')
     .build();
+  // ResQConnect: Transformed for disaster relief notifications
   const document = SwaggerModule.createDocument(app, config, {
     include: [CheckoutModule],
   });

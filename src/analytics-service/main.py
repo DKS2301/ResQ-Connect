@@ -1,6 +1,6 @@
 """
 ResQConnect Analytics Service
-Data pipeline, reporting, and analytics for disaster relief operationss
+Data pipeline, reporting, and analytics for disaster relief operations
 """
 
 from fastapi import FastAPI, HTTPException, BackgroundTasks

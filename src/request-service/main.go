@@ -51,6 +51,7 @@ import (
 // @title Catalog API
 // @version 1.0
 // @description This API serves the product request
+// ResQConnect: Transformed for disaster relief request management
 
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
